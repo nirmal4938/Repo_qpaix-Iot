@@ -1,0 +1,37 @@
+.header-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure it's above other content */
+  background-color: #fff; /* Background color of the header */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.header-menubar {
+  align-items: center;
+  padding: 5px 5px; /* Add padding for spacing */
+  .p-menubar {
+    background: transparent;
+    justify-content: space-between;
+  }
+  .p-menu {
+    /* Add styles to the menu items if needed */
+    width: 100%;
+  }
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.p-menubar-root-list {
+  margin: unset;
+}
+.p-menuitem-link.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.p-divider-solid.p-divider-horizontal:before {
+  border-top-style: 3px solid !important;
+  border: 1px solid #777d8b70;
+}

@@ -1,0 +1,21 @@
+// If you want to override variables do it here
+@import 'variables';
+
+// Import styles
+@import '@coreui/coreui/scss/coreui';
+
+// Vendors
+@import 'vendors/simplebar';
+
+// Custom styles for this theme
+@import 'theme';
+
+// If you want to add custom CSS you can put it here
+@import 'custom';
+@font-face {
+  font-family: 'lato';
+  src:
+    url('../../public/assets/Lato-Bold.ttf') format('woff2'),
+    url('../../public/assets/Lato-Black.ttf') format('woff');
+  /* Add additional font file formats as needed */
+}

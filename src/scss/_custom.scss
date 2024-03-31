@@ -1,0 +1,293 @@
+// DataTableExample.scss
+
+.p-datatable {
+  // Style for each row
+  border: 1px solid #dbdfe6;
+  .p-datatable-wrapper {
+    padding: 0.3rem 0.5rem;
+  }
+  .p-datatable-header {
+    padding: 0.3rem 0.3rem;
+  }
+  .p-datatable-gridlines .p-datatable-tbody > tr > td {
+    border-width: 1px 0 0 1px !important;
+  }
+  .p-datatable-thead {
+    border-color: #b3b3b3;
+    border-style: solid;
+    border-width: 2px !important;
+    > tr > th > span[data-pc-section='sort'] svg {
+      /* Your CSS styles for the span with data-pc-section="sort" */
+      font-size: small;
+      color: #f2f2f2 !important;
+    }
+    tr {
+      border-width: 1 !important;
+    }
+    th {
+      // padding: 0.3rem 0.3rem !important;
+      // background: #212631 !important;
+      // color: #e2e3e4 !important;
+      // border-right: 1px solid #e2e3e4 !important;
+      padding: 0.3rem 0.3rem !important;
+      background: #e2f0e2 !important;
+      color: #474747 !important;
+      border-right: 2px solid#b3b3b3 !important;
+    }
+    span[data-pc-section='sort'] svg {
+      // color: white !important;
+      // color: black !important;
+      color: #474747;
+      height: 13px;
+    }
+  }
+
+  .p-datatable-tbody > tr {
+    border-bottom: 1px solid #ccc;
+    &:nth-child(even) {
+      background-color: #f2f2f2; // Alternate background color for odd rows
+    }
+    td {
+      text-align: center; // Align content of td elements to the center
+      padding: 0.3rem 0.3rem !important;
+      max-width: 130px; /* Adjust this value as needed */
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  // Style for table header row
+  .p-column-header-content {
+    display: flex;
+    justify-content: center;
+  }
+  // Optional: Add padding to the bottom of the last row
+  .p-datatable-tbody > tr:last-child {
+    padding-bottom: 10px;
+  }
+
+  .p-paginator-bottom {
+    .p-dropdown.p-component.p-inputwrapper.p-inputwrapper-filled {
+      position: absolute;
+      top: 7px;
+      left: 50px;
+      width: 68px;
+    }
+  }
+  .p-paginator .p-dropdown::after {
+    content: 'Entries';
+    position: absolute;
+    left: 70px;
+    top: 7px;
+  }
+  .p-paginator .p-dropdown::before {
+    content: 'Shows';
+    position: absolute;
+    left: -50px;
+    top: 7px;
+  }
+  .p-paginator .p-paginator-first .p-paginator-icon::before {
+    content: 'First';
+  }
+  .p-paginator .p-paginator-prev .p-paginator-icon::before {
+    content: 'Previous';
+  }
+  .p-paginator .p-paginator-next .p-paginator-icon::before {
+    content: 'Next';
+  }
+  .p-paginator .p-paginator-last .p-paginator-icon::before {
+    content: 'Last';
+  }
+  .p-paginator .p-paginator-first,
+  .p-paginator .p-paginator-prev,
+  .p-paginator .p-paginator-next,
+  .p-paginator .p-paginator-last {
+    height: 40px;
+    min-width: 40px;
+    border-radius: 0;
+    border: 1px solid #d5d5d5;
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .p-paginator .p-paginator-prev,
+  .p-paginator .p-paginator-next,
+  .p-paginator .p-paginator-last {
+    border-left: none;
+  }
+
+  .p-paginator .p-paginator-element.p-disabled {
+    opacity: 1;
+  }
+
+  .p-paginator .p-paginator-element.p-disabled span.p-paginator-icon {
+    opacity: 0.6;
+  }
+
+  .p-paginator .p-paginator-element span.p-paginator-icon {
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .p-paginator .p-paginator-pages .p-paginator-page {
+    height: 40px;
+    min-width: 40px;
+    border-radius: 0;
+    border: 1px solid #d5d5d5;
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border-left: none;
+  }
+
+  .p-paginator .p-paginator-first {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  .p-paginator .p-paginator-last {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+    background: var(--theme-color);
+    color: var(--color2);
+    border-color: #d5d5d5;
+  }
+
+  .p-paginator .p-paginator-current {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 auto 0 0;
+  }
+
+  .p-paginator .p-paginator-first:not(.p-disabled):not(.p-highlight):hover,
+  .p-paginator .p-paginator-prev:not(.p-disabled):not(.p-highlight):hover,
+  .p-paginator .p-paginator-next:not(.p-disabled):not(.p-highlight):hover,
+  .p-paginator .p-paginator-last:not(.p-disabled):not(.p-highlight):hover {
+    background: #e9ecef;
+    border-color: #d5d5d5;
+    color: #6c757d;
+  }
+
+  .p-paginator .p-paginator-pages .p-paginator-page:not(.p-highlight):hover {
+    background: #e9ecef;
+    border-color: #d5d5d5;
+    color: #6c757d;
+  }
+}
+a {
+  color: rgba(var(--cui-link-color-rgb), var(--cui-link-opacity, 1));
+  text-decoration: none !important;
+}
+// panel expand collapse icon
+.p-panel-header-icon .p-panel-toggler {
+  height: auto !important;
+}
+#action_menu ul#action_menu_list {
+  margin-bottom: auto;
+}
+
+// Authentication page(Login) css
+.auth-layout-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  margin: 10px;
+}
+
+.auth-card {
+  width: 75%; /* Set card width to 75% */
+  height: 600px;
+}
+
+.centered {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  width: 100%; /* Full width */
+}
+
+// client form css revised
+.client-form-warpper {
+  .p-panel .p-panel-content {
+    padding: 0.5rem !important;
+  }
+  .p-steps {
+    a.p-menuitem-link {
+      background: #f8f9fa;
+    }
+    .p-steps-item.p-highlight .p-steps-number {
+      background: #212631;
+      color: #e2e3e4;
+    }
+  }
+}
+
+// styles for card
+
+.client-activation-card {
+  .p-card-title {
+    text-align: center;
+  }
+}
+// styles fro data-view
+.p-tabview {
+  .p-dataview-content {
+    .grid-nogutter > .col,
+    .grid-nogutter > [class*='col-'] {
+      padding: inherit !important;
+    }
+    .p-nogutter.grid-nogutter {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px !important;
+    }
+    .p-card-body {
+      background: #fff8f4 !important;
+      padding: 0.5rem;
+    }
+    .p-card-title {
+      font-size: 16px;
+      padding: 2px;
+      margin: unset;
+      display: flex;
+      justify-content: space-between;
+      background: #e6f0f6;
+      align-items: center;
+    }
+  }
+}
+
+.tank-summary {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.summary-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.summary-item span {
+  margin-right: 10px;
+}
+.p-progressbar {
+  width: 60%;
+}
+
+.scada-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #ffffff;
+}

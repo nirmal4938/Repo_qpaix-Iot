@@ -1,0 +1,31 @@
+{
+  "screen_id": "client_management",
+  "screen_number": 2,
+  "title": "Client Location",
+  "description": "The Cient Location screen allows administrators to view, create, edit, and delete client location within the system.",
+  "components": [
+    "Location List",
+    "Location Details",
+    "Location Creation Form",
+    "Location Deletion Modal"
+  ],
+  "functionality": [
+    "View a list of all Location and their details.",
+    "Search Location by latitude, longitude, or person details(contact info.).",
+    "Edit Location details such as latitude, longitude, or person details(contact info.).",
+    "Create new user Location.",
+    "Delete Location after confirmation."
+  ],
+  "ui_elements": [
+    "Location table with columns for location, latitude, longitude, and Actions.",
+    "Search bar and filter dropdowns for easy user navigation.",
+    "Edit and delete buttons within each user row.",
+    "Create location button at the top of the page.",
+    "Confirmation modal for deleting location."
+  ],
+  "navigation": "User can access the Location Management screen through the main sidebar navigation under the 'Client' section.",
+  "user_permissions": "Access to the Client Location Management screen is restricted to users with administrator privileges.",
+  "dependencies": ["React Router", "Axios"],
+  "mockups": ["client_location_list_mockup.png", "client_location_details_mockup.png"],
+  "additional_notes": "Ensure that sensitive client information is handled securely and that deletion actions are irreversible to prevent accidental data loss."
+}

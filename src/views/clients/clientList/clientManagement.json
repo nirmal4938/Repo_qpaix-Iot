@@ -1,0 +1,26 @@
+{
+  "screen_id": "client_management",
+  "screen_number": 1,
+  "title": "Client Management",
+  "description": "The Cient Management screen allows administrators to view, create, edit, and delete client accounts within the system.",
+  "components": ["Client List", "Client Details", "Client Creation Form", "Client Deletion Modal"],
+  "functionality": [
+    "View a list of all client and their details.",
+    "Search client by name, email, or role.",
+    "Edit client details such as name, email, and role.",
+    "Create new user accounts.",
+    "Delete client accounts after confirmation."
+  ],
+  "ui_elements": [
+    "Client table with columns for Name, Email, Role, and Actions.",
+    "Search bar and filter dropdowns for easy user navigation.",
+    "Edit and delete buttons within each user row.",
+    "Create client button at the top of the page.",
+    "Confirmation modal for deleting client."
+  ],
+  "navigation": "Clients can access the User Management screen through the main sidebar navigation under the 'Clients' section.",
+  "user_permissions": "Access to the Client Management screen is restricted to users with administrator privileges.",
+  "dependencies": ["React Router", "Axios"],
+  "mockups": ["client_list_mockup.png", "client_details_mockup.png"],
+  "additional_notes": "Ensure that sensitive client information is handled securely and that deletion actions are irreversible to prevent accidental data loss."
+}
